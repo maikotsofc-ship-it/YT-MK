@@ -1,0 +1,31 @@
+/* Base inteligente para adaptação fluida */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #101010;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* O container mantém a proporção ideal de TV, mas não quebra se redimensionado em outras telas */
+#app-container {
+    position: relative;
+    width: 100vw !important;
+    height: 56.25vw !important; /* Trava em 16:9 widescreen */
+    max-height: 100vh !important;
+    max-width: 177.78vh !important; 
+    box-sizing: border-box;
+    overflow: hidden !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* Ajuste específico para TVs com variação de moldura física (Série J) */
+@media screen and (max-device-width: 1280px) {
+    #app-container {
+        transform: scale(0.97); /* Redução sutil de 3% para garantir que nenhum menu suma na borda física */
+    }
+}
