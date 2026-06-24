@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Lite + Gemini AI</title>
+    
+    <link rel="stylesheet" href="css/calibration.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="app-container">
+        <div id="sidebar">
+            <div class="menu-item" tabindex="0" id="menu-0" data-id="dQw4w9WgXcQ">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                <span>Início</span>
+            </div>
+
+            <div class="menu-item" tabindex="0" id="menu-1" data-id="kJQP7kiw5Fk">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                <span>Música</span>
+            </div>
+
+            <div class="menu-item gemini-btn" tabindex="0" id="menu-2" data-id="gemini">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="M12 2a1 1 0 0 1 .93.64l1.92 4.8a2 2 0 0 0 1.1 1.1l4.8 1.92a1 1 0 0 1 0 1.86l-4.8 1.92a2 2 0 0 0-1.1 1.1l-1.92 4.8a1 1 0 0 1-1.86 0l-1.92-4.8a2 2 0 0 0-1.1-1.1l-4.8-1.92a1 1 0 0 1 0-1.86l4.8-1.92a2 2 0 0 0 1.1-1.1l1.92-4.8A1 1 0 0 1 12 2zm4 14a.75.75 0 0 1 .7.48l.58 1.44a.75.75 0 0 0 .42.42l1.44.58a.75.75 0 0 1 0 1.4l-1.44.58a.75.75 0 0 0-.42.42l-.58 1.44a.75.75 0 0 1-1.4 0l-.58-1.44a.75.75 0 0 0-.42-.42l-1.44-.58a.75.75 0 0 1 0-1.4l1.44-.58a.75.75 0 0 0 .42-.42l.58-1.44a.75.75 0 0 1 .7-.48z"/></svg>
+                <span>Gemini</span>
+            </div>
+
+            <div class="menu-item" tabindex="0" id="menu-3" data-id="9bZkp7q19f0">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                <span>Ajuda</span>
+            </div>
+
+            <div class="menu-item" tabindex="0" id="menu-4" data-id="09R8_2nJtjg">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2-3.46zM12 15.5c-1.93 0-3-1.07-3-3s1.07-3 3-3 3 1.07 3 3-1.07 3-3 3z"/></svg>
+                <span>Config</span>
+            </div>
+        </div>
+
+        <div id="video-player-container">
+            <iframe id="tv-player" src="" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
