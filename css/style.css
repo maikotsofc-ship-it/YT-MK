@@ -3,14 +3,13 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #181818;
+    background-color: #181818; /* Cinza escuro confortável */
     color: #e0e0e0;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    overflow: hidden !important; /* Remove qualquer barra de rolagem */
+    overflow: hidden !important; /* Remove barras de rolagem */
 }
 
-/* CONTAINER PRINCIPAL */
 #app-container {
     width: 100%;
     height: 100%;
@@ -19,13 +18,13 @@ html, body {
     overflow: hidden;
 }
 
-/* BARRA LATERAL (Estilo Clássico com Largura Fixa para TV) */
+/* BARRA LATERAL (Largura fixa para não bugar em TVs antigas) */
 #sidebar {
-    width: 110px; /* Tamanho fixo perfeito para visualização de longe */
+    width: 110px;
     height: 100%;
-    background-color: #202020;
+    background-color: #202020; /* Tom sobre tom elegante */
     border-right: 1px solid #2d2d2d;
-    float: left; /* Garante que fique na esquerda sem bugar */
+    float: left; /* Alinhamento clássico ultra-compatível */
     box-sizing: border-box;
     padding-top: 20px;
 }
@@ -34,7 +33,7 @@ html, body {
 .menu-item {
     width: 90px;
     height: 85px;
-    margin: 0 auto 15px auto; /* Centraliza os botões e dá espaçamento para baixo */
+    margin: 0 auto 15px auto;
     border-radius: 12px;
     display: block;
     cursor: pointer;
@@ -43,7 +42,7 @@ html, body {
     text-align: center;
 }
 
-/* Ícones SVG */
+/* Ícones dos Botões */
 .menu-item svg {
     width: 32px;
     height: 32px;
@@ -52,18 +51,18 @@ html, body {
     margin: 8px auto 4px auto;
 }
 
-/* Textos do Menu (Sem cortar!) */
+/* Textos dos Botões */
 .menu-item span {
-    font-size: 11px; /* Tamanho em px para a TV não diminuir demais */
+    font-size: 11px;
     color: #8e8e8e;
     display: block;
     width: 100%;
     text-align: center;
-    white-space: normal; /* Permite que o texto quebre em duas linhas se for grande */
+    white-space: normal;
     line-height: 12px;
 }
 
-/* SELEÇÃO E FOCO NA TV */
+/* Efeito de Foco / Seleção (Controle Remoto) */
 .menu-item:hover, .menu-item:focus, .menu-item.active {
     background-color: #2d2d2d !important;
 }
@@ -77,7 +76,7 @@ html, body {
     font-weight: bold;
 }
 
-/* ESTILIZAÇÃO DO BOTÃO GEMINI */
+/* Destaque do Botão Gemini */
 .menu-item.gemini-btn:hover svg, .menu-item.gemini-btn:focus svg, .menu-item.gemini-btn.active svg {
     fill: #8ab4f8 !important;
 }
@@ -85,68 +84,12 @@ html, body {
     color: #8ab4f8 !important;
 }
 
-/* CONTAINER DO PLAYER (Ocupa o resto da tela de forma limpa) */
+/* CONTAINER DO PLAYER (Ocupa todo o resto da tela) */
 #video-player-container {
-    margin-left: 110px; /* Abandona o espaço do menu lateral */
+    margin-left: 110px;
     height: 100%;
     background-color: #101010;
     position: relative;
-    overflow: hidden;
-}
-
-#tv-player {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background-color: #101010;
-}
-}
-
-/* Textos do Menu */
-.menu-item span {
-    font-size: 0.8vw;
-    color: #8e8e8e;
-    margin-top: 0.6vh;
-    display: block;
-    width: 100%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* SELEÇÃO E FOCO NA TV */
-.menu-item:hover, .menu-item:focus, .menu-item.active {
-    background-color: #2d2d2d !important;
-}
-
-.menu-item:hover svg, .menu-item:focus svg, .menu-item.active svg {
-    fill: #ffffff;
-}
-
-.menu-item:hover span, .menu-item:focus span, .menu-item.active span {
-    color: #ffffff;
-    font-weight: bold;
-}
-
-/* ESTILIZAÇÃO DO BOTÃO GEMINI */
-.menu-item.gemini-btn:hover svg, .menu-item.gemini-btn:focus svg, .menu-item.gemini-btn.active svg {
-    fill: #8ab4f8 !important; /* Lindo azul tecnológico e suave */
-}
-.menu-item.gemini-btn:hover span, .menu-item.gemini-btn:focus span, .menu-item.gemini-btn.active span {
-    color: #8ab4f8 !important;
-}
-
-/* CONTAINER DO PLAYER ADAPTÁVEL: Ocupa o resto da tela nativamente */
-#video-player-container {
-    width: 92vw; /* Ajustado para percentual exato somando 100vw com o menu (8vw + 92vw) */
-    height: 100%;
-    background-color: #101010; 
-    position: relative;
-    
-    /* Compensação cirúrgica: empurra o bloco levemente para fora e esconde a borda cinza da TV */
-    margin-right: -4px;
-    padding-right: 4px;
     overflow: hidden;
 }
 
