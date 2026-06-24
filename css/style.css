@@ -3,57 +3,103 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #181818; /* Cinza escuro suave de fundo */
-    color: #e0e0e0; 
+    background-color: #181818;
+    color: #e0e0e0;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    overflow: hidden !important;
+    overflow: hidden !important; /* Remove qualquer barra de rolagem */
 }
 
-/* CONTAINER PRINCIPAL CORRIGIDO: Respeita totalmente o arquivo calibration.css */
+/* CONTAINER PRINCIPAL */
 #app-container {
-    display: flex;
-    flex-direction: row;
     width: 100%;
-    height: 100%; /* Agora ele assume 100% da altura travada pelo calibrador, sem esticar */
+    height: 100%;
     background-color: #181818;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
-/* BARRA LATERAL MINIMALISTA */
+/* BARRA LATERAL (Estilo Clássico com Largura Fixa para TV) */
 #sidebar {
-    width: 8vw;
+    width: 110px; /* Tamanho fixo perfeito para visualização de longe */
     height: 100%;
-    background-color: #202020; /* Tom de cinza levemente mais claro para criar relevo suave */
+    background-color: #202020;
     border-right: 1px solid #2d2d2d;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 4vh;
+    float: left; /* Garante que fique na esquerda sem bugar */
     box-sizing: border-box;
-    gap: 1.5vh;
+    padding-top: 20px;
 }
 
-/* Botões do Menu Minimalistas */
+/* Botões do Menu */
 .menu-item {
-    width: 6.8vw;
-    height: 6.8vw;
+    width: 90px;
+    height: 85px;
+    margin: 0 auto 15px auto; /* Centraliza os botões e dá espaçamento para baixo */
     border-radius: 12px;
     display: block;
     cursor: pointer;
     box-sizing: border-box;
     background-color: transparent;
     text-align: center;
-    padding-top: 1vh;
 }
 
 /* Ícones SVG */
 .menu-item svg {
-    width: 2.4vw;
-    height: 2.4vw;
-    fill: #8e8e8e; /* Cinza médio fosco, suave para os olhos */
+    width: 32px;
+    height: 32px;
+    fill: #8e8e8e;
     display: block;
-    margin: 0 auto;
+    margin: 8px auto 4px auto;
+}
+
+/* Textos do Menu (Sem cortar!) */
+.menu-item span {
+    font-size: 11px; /* Tamanho em px para a TV não diminuir demais */
+    color: #8e8e8e;
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: normal; /* Permite que o texto quebre em duas linhas se for grande */
+    line-height: 12px;
+}
+
+/* SELEÇÃO E FOCO NA TV */
+.menu-item:hover, .menu-item:focus, .menu-item.active {
+    background-color: #2d2d2d !important;
+}
+
+.menu-item:hover svg, .menu-item:focus svg, .menu-item.active svg {
+    fill: #ffffff;
+}
+
+.menu-item:hover span, .menu-item:focus span, .menu-item.active span {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ESTILIZAÇÃO DO BOTÃO GEMINI */
+.menu-item.gemini-btn:hover svg, .menu-item.gemini-btn:focus svg, .menu-item.gemini-btn.active svg {
+    fill: #8ab4f8 !important;
+}
+.menu-item.gemini-btn:hover span, .menu-item.gemini-btn:focus span, .menu-item.gemini-btn.active span {
+    color: #8ab4f8 !important;
+}
+
+/* CONTAINER DO PLAYER (Ocupa o resto da tela de forma limpa) */
+#video-player-container {
+    margin-left: 110px; /* Abandona o espaço do menu lateral */
+    height: 100%;
+    background-color: #101010;
+    position: relative;
+    overflow: hidden;
+}
+
+#tv-player {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #101010;
+}
 }
 
 /* Textos do Menu */
