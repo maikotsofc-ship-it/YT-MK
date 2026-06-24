@@ -26,7 +26,7 @@ function renderizarMenu() {
 
         var iconePath = "M8 5v14l11-7z"; 
 
-        btn.innerHTML = '<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="' + iconePath + '"/></svg><span>' + video.titulo.split(' - ')[0] + '</span>';
+        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="' + iconePath + '"/></svg><span>' + video.titulo.split(' - ')[0] + '</span>';
 
         btn.onclick = function() {
             selecionarItem(posicao);
@@ -45,7 +45,7 @@ function adicionarBotaoGemini(sidebar) {
     btn.className = 'menu-item gemini-btn';
     btn.id = 'menu-' + posicao;
     btn.setAttribute('tabindex', '0');
-    btn.innerHTML = '<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="M12 2a1 1 0 0 1 .93.64l1.92 4.8a2 2 0 0 0 1.1 1.1l4.8 1.92a1 1 0 0 1 0 1.86l-4.8 1.92a2 2 0 0 0-1.1 1.1l-1.92 4.8a1 1 0 0 1-1.86 0l-1.92-4.8a2 2 0 0 0-1.1-1.1l-4.8-1.92a1 1 0 0 1 0-1.86l4.8-1.92a2 2 0 0 0 1.1-1.1l1.92-4.8A1 1 0 0 1 12 2z"/></svg><span>Gemini</span>';
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 2a1 1 0 0 1 .93.64l1.92 4.8a2 2 0 0 0 1.1 1.1l4.8 1.92a1 1 0 0 1 0 1.86l-4.8 1.92a2 2 0 0 0-1.1 1.1l-1.92 4.8a1 1 0 0 1-1.86 0l-1.92-4.8a2 2 0 0 0-1.1-1.1l-4.8-1.92a1 1 0 0 1 0-1.86l4.8-1.92a2 2 0 0 0 1.1-1.1l1.92-4.8A1 1 0 0 1 12 2z"/></svg><span>Gemini</span>';
     
     btn.onclick = function() {
         selecionarItem(posicao);
@@ -76,11 +76,11 @@ function playVideo(videoId) {
 function chamarGemini() {
     var container = document.getElementById('video-player-container');
     if (container) {
+        // Centralização absoluta perfeita para navegadores antigos
         container.innerHTML = '<div style="position:absolute;top:0;left:0;width:100%;height:100%;background:#181818;color:#8ab4f8;font-family:sans-serif;text-align:center;padding-top:15%;box-sizing:border-box;"><h1 style="font-size:36px;margin-bottom:10px;font-weight:normal;">Gemini AI</h1><p style="color:#8e8e8e;font-size:16px;width:70%;margin:0 auto;line-height:1.6;">Modo Web App Adaptável Ativo!<br>Interface limpa, minimalista e balanceada para a sua TV.</p></div>';
         playerAtivo = true;
     }
 }
-
 
 function stopVideo() {
     var container = document.getElementById('video-player-container');
