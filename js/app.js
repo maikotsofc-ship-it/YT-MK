@@ -76,11 +76,11 @@ function playVideo(videoId) {
 function chamarGemini() {
     var container = document.getElementById('video-player-container');
     if (container) {
-        // Interface integrada no Cinza Escuro Suave Minimalista
-        container.innerHTML = '<div style="background:#181818;color:#8ab4f8;font-family:sans-serif;display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;width:100%;margin:0;overflow:hidden;"><h1 style="font-size:3vw;margin-bottom:1vh;font-weight:normal;">Gemini AI</h1><p style="color:#8e8e8e;font-size:1.4vw;text-align:center;width:70%;line-height:1.6;">Modo Web App Adaptável Ativo!<br>Interface limpa, minimalista e balanceada para a sua TV.</p></div>';
+        container.innerHTML = '<div style="position:absolute;top:0;left:0;width:100%;height:100%;background:#181818;color:#8ab4f8;font-family:sans-serif;text-align:center;padding-top:15%;box-sizing:border-box;"><h1 style="font-size:36px;margin-bottom:10px;font-weight:normal;">Gemini AI</h1><p style="color:#8e8e8e;font-size:16px;width:70%;margin:0 auto;line-height:1.6;">Modo Web App Adaptável Ativo!<br>Interface limpa, minimalista e balanceada para a sua TV.</p></div>';
         playerAtivo = true;
     }
 }
+
 
 function stopVideo() {
     var container = document.getElementById('video-player-container');
